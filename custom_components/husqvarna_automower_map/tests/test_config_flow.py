@@ -6,34 +6,13 @@ from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResultType
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
-from ..const import (
-    ADD_IMAGES,
-    DOMAIN,
-    ENABLE_IMAGE,
-    GPS_BOTTOM_RIGHT,
-    GPS_TOP_LEFT,
-    HOME_LOCATION,
-    MAP_IMG_PATH,
-    MAP_IMG_ROTATION,
-    MAP_PATH_COLOR,
-    MOWER_IMG_PATH,
-    ZONE_COLOR,
-    ZONE_COORD,
-    ZONE_DEL,
-    ZONE_DISPLAY,
-    ZONE_FINISH,
-    ZONE_MOWERS,
-    ZONE_NAME,
-    ZONE_NEW,
-    ZONE_SEL,
-)
-from .const import (
-    AUTOMER_DM_CONFIG,
-    AUTOMOWER_CONFIG_DATA,
-    AUTOMOWER_DM_SESSION_DATA,
-    MWR_ONE_ID,
-    MWR_TWO_ID,
-)
+from ..const import (ADD_IMAGES, DOMAIN, ENABLE_IMAGE, GPS_BOTTOM_RIGHT,
+                     GPS_TOP_LEFT, HOME_LOCATION, MAP_IMG_PATH,
+                     MAP_IMG_ROTATION, MAP_PATH_COLOR, MOWER_IMG_PATH,
+                     ZONE_COLOR, ZONE_COORD, ZONE_DEL, ZONE_DISPLAY,
+                     ZONE_FINISH, ZONE_MOWERS, ZONE_NAME, ZONE_NEW, ZONE_SEL)
+from .const import (AUTOMER_DM_CONFIG, AUTOMOWER_CONFIG_DATA,
+                    AUTOMOWER_DM_SESSION_DATA, MWR_ONE_ID, MWR_TWO_ID)
 
 
 def get_suggested(schema, key):
@@ -265,7 +244,7 @@ async def test_options_image_config(hass: HomeAssistant) -> None:
                 ENABLE_IMAGE: True,
                 GPS_BOTTOM_RIGHT: "35.539442,-82.5504646",
                 GPS_TOP_LEFT: "35.5411008,-82.5527418",
-                MOWER_IMG_PATH: "custom_components/husqvarna_automower/tests/resources/missing.png",
+                MOWER_IMG_PATH: "custom_components/husqvarna_automower_map/tests/resources/missing.png",
             },
         )
 
@@ -278,7 +257,7 @@ async def test_options_image_config(hass: HomeAssistant) -> None:
                 ENABLE_IMAGE: True,
                 GPS_BOTTOM_RIGHT: "35.539442,-82.5504646",
                 GPS_TOP_LEFT: "35.5411008,-82.5527418",
-                MOWER_IMG_PATH: "custom_components/husqvarna_automower/tests/resources/bad_image.png",
+                MOWER_IMG_PATH: "custom_components/husqvarna_automower_map/tests/resources/bad_image.png",
             },
         )
 
@@ -291,7 +270,7 @@ async def test_options_image_config(hass: HomeAssistant) -> None:
                 ENABLE_IMAGE: True,
                 GPS_BOTTOM_RIGHT: "35.539442,-82.5504646",
                 GPS_TOP_LEFT: "35.5411008,-82.5527418",
-                MAP_IMG_PATH: "custom_components/husqvarna_automower/tests/resources/missing.png",
+                MAP_IMG_PATH: "custom_components/husqvarna_automower_map/tests/resources/missing.png",
             },
         )
 
@@ -304,7 +283,7 @@ async def test_options_image_config(hass: HomeAssistant) -> None:
                 ENABLE_IMAGE: True,
                 GPS_BOTTOM_RIGHT: "35.539442,-82.5504646",
                 GPS_TOP_LEFT: "35.5411008,-82.5527418",
-                MAP_IMG_PATH: "custom_components/husqvarna_automower/tests/resources/bad_image.png",
+                MAP_IMG_PATH: "custom_components/husqvarna_automower_map/tests/resources/bad_image.png",
             },
         )
 

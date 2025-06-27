@@ -12,8 +12,8 @@ MWR_ONE_CONFIG = {
     ENABLE_IMAGE: True,
     "gps_top_left": [35.5411008, -82.5527418],
     "gps_bottom_right": [35.539442, -82.5504646],
-    "mower_img_path": "custom_components/husqvarna_automower/resources/mower.png",
-    "map_img_path": "custom_components/husqvarna_automower/tests/resources/biltmore-min.png",
+    "mower_img_path": "custom_components/husqvarna_automower_map/resources/mower.png",
+    "map_img_path": "custom_components/husqvarna_automower_map/tests/resources/biltmore-min.png",
     "map_path_color": [255, 0, 0],
     "map_img_rotation": -16.10,
     "home_location": [35.54028774, -82.5526962],
@@ -24,8 +24,8 @@ MWR_TWO_CONFIG = {
     ENABLE_IMAGE: True,
     "gps_top_left": [35.5411008, -82.5527418],
     "gps_bottom_right": [35.539442, -82.5504646],
-    "mower_img_path": "custom_components/husqvarna_automower/resources/mower.png",
-    "map_img_path": "custom_components/husqvarna_automower/tests/resources/biltmore-min.png",
+    "mower_img_path": "custom_components/husqvarna_automower_map/resources/mower.png",
+    "map_img_path": "custom_components/husqvarna_automower_map/tests/resources/biltmore-min.png",
     "map_path_color": [0, 0, 255],
     "map_img_rotation": -16.10,
     "home_location": [35.5409924, -82.5525482],
@@ -219,7 +219,7 @@ AUTOMOWER_DM_SESSION_DATA = {
 }
 
 AUTOMOWER_CONFIG_DATA = {
-    "auth_implementation": "husqvarna_automower",
+    "auth_implementation": "husqvarna_automower_map",
     "token": {
         "access_token": "f8f1983d-d88a-4ef1-91ab-af54fefaa9d0",
         "scope": "iam:read amc:api",
@@ -234,7 +234,7 @@ AUTOMOWER_CONFIG_DATA = {
 }
 
 AUTOMOWER_CONFIG_DATA_BAD_SCOPE = {
-    "auth_implementation": "husqvarna_automower",
+    "auth_implementation": "husqvarna_automower_map",
     "token": {
         "access_token": "f8f1983d-d88a-4ef1-91ab-af54fefaa9d0",
         "scope": "iam:read",

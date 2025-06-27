@@ -3,13 +3,8 @@
 import pytest
 from shapely.geometry import Point
 
-from ..map_utils import (
-    LatLon,
-    ValidatePointString,
-    ValidateRGB,
-    validate_image,
-    validate_rotation,
-)
+from ..map_utils import (LatLon, ValidatePointString, ValidateRGB,
+                         validate_image, validate_rotation)
 
 
 @pytest.mark.asyncio
@@ -37,7 +32,7 @@ async def test_validate_image():
     # Good Image
     assert (
         validate_image(
-            "custom_components/husqvarna_automower/tests/resources/biltmore-min.png"
+            "custom_components/husqvarna_automower_map/tests/resources/biltmore-min.png"
         )
         is True
     )
@@ -45,7 +40,7 @@ async def test_validate_image():
     # Bad Path
     assert (
         validate_image(
-            "custom_components/husqvarna_automower/tests/resources/not_an_image.png"
+            "custom_components/husqvarna_automower_map/tests/resources/not_an_image.png"
         )
         is False
     )
@@ -53,7 +48,7 @@ async def test_validate_image():
     # Not an image
     assert (
         validate_image(
-            "custom_components/husqvarna_automower/tests/resources/bad_image.png"
+            "custom_components/husqvarna_automower_map/tests/resources/bad_image.png"
         )
         is False
     )

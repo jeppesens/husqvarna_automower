@@ -30,10 +30,10 @@ jobs:
 
     - name: Check with Black Code Formatter
       run: |
-        black custom_components/husqvarna_automower --check
+        black custom_components/husqvarna_automower_map --check
     - name: Lint with pydocstyle
       run: |
-        pydocstyle custom_components/husqvarna_automower
+        pydocstyle custom_components/husqvarna_automower_map
     - name: Lint with isort
       run: |
-        isort custom_components/husqvarna_automower
+        isort custom_components/husqvarna_automower_map

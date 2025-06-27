@@ -13,7 +13,7 @@ from ..system_health import async_register, system_health_info
 async def test_system_health_info(hass: HomeAssistant):
     """test system_health_info."""
     with patch(
-        "custom_components.husqvarna_automower.system_health.async_check_can_reach_url",
+        "custom_components.husqvarna_automower_map.system_health.async_check_can_reach_url",
         MagicMock(),
     ) as can_reach_url:
         await system_health_info(hass)
