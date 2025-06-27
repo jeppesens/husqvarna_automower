@@ -10,16 +10,9 @@ from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from ..const import DOMAIN, NO_SUPPORT_FOR_CHANGING_CUTTING_HEIGHT, ZONE_ID
 from ..sensor import SENSOR_TYPES, AutomowerZoneSensor, get_problem
-from .const import (
-    AUTOMER_DM_CONFIG,
-    AUTOMOWER_CONFIG_DATA,
-    AUTOMOWER_SM_SESSION_DATA,
-    DEFAULT_ZONES,
-    FRONT_GARDEN_PNT,
-    MWR_ONE_ID,
-    MWR_ONE_IDX,
-    NO_ZONE_PNT,
-)
+from .const import (AUTOMER_DM_CONFIG, AUTOMOWER_CONFIG_DATA,
+                    AUTOMOWER_SM_SESSION_DATA, DEFAULT_ZONES, FRONT_GARDEN_PNT,
+                    MWR_ONE_ID, MWR_ONE_IDX, NO_ZONE_PNT)
 
 
 @pytest.mark.asyncio
@@ -146,7 +139,7 @@ async def test_statistics_sensors(hass: HomeAssistant):
     for s in TEST_SENSOR_TYPES:
         s.entity_registry_enabled_default = True
     with patch(
-        "custom_components.husqvarna_automower.sensor.SENSOR_TYPES", TEST_SENSOR_TYPES
+        "custom_components.husqvarna_automower_map.sensor.SENSOR_TYPES", TEST_SENSOR_TYPES
     ):
         config_entry = await setup_zone_sensor(hass)
 

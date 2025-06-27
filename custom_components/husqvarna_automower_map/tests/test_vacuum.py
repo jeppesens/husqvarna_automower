@@ -7,14 +7,9 @@ import pytest
 from aioautomower import AutomowerSession
 from aiohttp import ClientResponseError
 from dateutil import tz
-from homeassistant.components.vacuum import (
-    STATE_CLEANING,
-    STATE_DOCKED,
-    STATE_ERROR,
-    STATE_IDLE,
-    STATE_PAUSED,
-    STATE_RETURNING,
-)
+from homeassistant.components.vacuum import (STATE_CLEANING, STATE_DOCKED,
+                                             STATE_ERROR, STATE_IDLE,
+                                             STATE_PAUSED, STATE_RETURNING)
 from homeassistant.config_entries import ConfigEntryState
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConditionErrorMessage, HomeAssistantError
@@ -23,13 +18,8 @@ from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from ..const import DOMAIN
 from ..vacuum import HusqvarnaAutomowerEntity
-from .const import (
-    AUTOMER_DM_CONFIG,
-    AUTOMOWER_CONFIG_DATA,
-    AUTOMOWER_SM_SESSION_DATA,
-    MWR_ONE_ID,
-    MWR_ONE_IDX,
-)
+from .const import (AUTOMER_DM_CONFIG, AUTOMOWER_CONFIG_DATA,
+                    AUTOMOWER_SM_SESSION_DATA, MWR_ONE_ID, MWR_ONE_IDX)
 
 
 @pytest.mark.asyncio
@@ -378,7 +368,7 @@ async def test_vacuum_schedule_selector_success(hass: HomeAssistant):
     )
     storage_mock = AsyncMock(name="storage mock", async_load=mock_async_load)
     with patch(
-        "custom_components.husqvarna_automower.vacuum.Store",
+        "custom_components.husqvarna_automower_map.vacuum.Store",
         MagicMock(name="store mock", spec=Store, return_value=storage_mock),
     ) as store_mock:
         await vacuum.async_schedule_selector("schedule.test_schedule")
@@ -419,7 +409,7 @@ async def test_vacuum_schedule_selector_fail(hass: HomeAssistant):
     )
     storage_mock = AsyncMock(name="storage mock", async_load=mock_async_load)
     with patch(
-        "custom_components.husqvarna_automower.vacuum.Store",
+        "custom_components.husqvarna_automower_map.vacuum.Store",
         MagicMock(name="store mock", spec=Store, return_value=storage_mock),
     ) as store_mock:
         # Raises ClientResponseError

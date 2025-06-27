@@ -11,18 +11,11 @@ from aioautomower import AutomowerSession
 from homeassistant.core import HomeAssistant
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
-from ..image import AutomowerImage
 from ..const import CONF_ZONES, DOMAIN, ENABLE_IMAGE
-from .const import (
-    AUTOMER_DM_CONFIG,
-    AUTOMOWER_CONFIG_DATA,
-    AUTOMOWER_DM_SESSION_DATA,
-    MWR_ONE_ID,
-    MWR_ONE_IDX,
-    MWR_TWO_ID,
-    MWR_TWO_IDX,
-    ENABLE_IMAGE,
-)
+from ..image import AutomowerImage
+from .const import (AUTOMER_DM_CONFIG, AUTOMOWER_CONFIG_DATA,
+                    AUTOMOWER_DM_SESSION_DATA, ENABLE_IMAGE, MWR_ONE_ID,
+                    MWR_ONE_IDX, MWR_TWO_ID, MWR_TWO_IDX)
 
 
 @pytest.mark.asyncio
@@ -109,7 +102,7 @@ async def test_load_image_enabled(hass: HomeAssistant):
     await asyncio.to_thread(image_two._generate_image, {})
 
     # Ensure output directory is present
-    output_path = Path("custom_components/husqvarna_automower/tests/output/")
+    output_path = Path("custom_components/husqvarna_automower_map/tests/output/")
     output_path.mkdir(parents=True, exist_ok=True)
 
     # Image to bytes - Mower One

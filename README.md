@@ -2,7 +2,7 @@
 
 ![Maintenance](https://img.shields.io/maintenance/yes/2023.svg)
 [![buy me a coffee](https://img.shields.io/badge/If%20you%20like%20it-Buy%20me%20a%20coffee-orange.svg)](https://www.buymeacoffee.com/Thomas55555)
-[![downloads](https://img.shields.io/github/downloads/Thomas55555/husqvarna_automower/total.svg)](https://img.shields.io/github/downloads/Thomas55555/husqvarna_automower/total.svg)
+[![downloads](https://img.shields.io/github/downloads/Thomas55555/husqvarna_automower_map/total.svg)](https://img.shields.io/github/downloads/Thomas55555/husqvarna_automower_map/total.svg)
 
 Custom component to support Automower.
 
@@ -54,9 +54,9 @@ Installation using Home Assistant Community Store (HACS) is recommended.
 
 ### Manual installation
 
-1. Download the `husqvarna_automower.zip` file from the repository [release section](https://github.com/Thomas55555/husqvarna_automower/releases).
+1. Download the `husqvarna_automower_map.zip` file from the repository [release section](https://github.com/Thomas55555/husqvarna_automower_map/releases).
 
-2. Extract and copy the content into the path `/config/custom_components/husqvarna_automower` of your HA installation.
+2. Extract and copy the content into the path `/config/custom_components/husqvarna_automower_map` of your HA installation.
 
    Do **not** download directly from the `main` branch.
 
@@ -104,7 +104,7 @@ Your Husqvarna account username/password used for the *Automower® Connect*  pho
 The My Home Assistant redirect feature needs to be setup to redirect to your home assistant installation.  See https://my.home-assistant.io/faq/ for additional information.
 
 1. Add the integration to your home assistant installation and test the redirect feature by following below link:
-   [![my_button](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=husqvarna_automower)
+   [![my_button](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=husqvarna_automower_map)
 
 2. Acknowledge prompts to open link, install Husqvarna Automower integration.
 
@@ -182,11 +182,11 @@ If a Home Zone is set, the sensor will return Home and the image will display th
 
 ### Services
 
-* `husqvarna_automower.calendar`
+* `husqvarna_automower_map.calendar`
   Allows mower schedule to be revised.  Supports single schedule per day, this will override existing schedule.
 
   ```
-  service: husqvarna_automower.calendar
+  service: husqvarna_automower_map.calendar
   data:
     start: '11:45:00'
     end: '21:30:00'
@@ -202,12 +202,12 @@ If a Home Zone is set, the sensor will return Home and the image will display th
   ```
   `start` must be less than `end`.  Seconds are ignored.
 
-* `husqvarna_automower.custom_command`
+* `husqvarna_automower_map.custom_command`
   Allows custom JSON formatted commands to be sent.
 
   Example equivalent to `vacuum.start`
   ```
-  service: husqvarna_automower.custom_command
+  service: husqvarna_automower_map.custom_command
   data:
     command_type: actions
     json_string: >-
@@ -229,7 +229,7 @@ Example:
 logger:
   default: info
   logs:
-    custom_components.husqvarna_automower: debug
+    custom_components.husqvarna_automower_map: debug
     aioautomower: debug
 ```
 

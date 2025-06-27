@@ -11,7 +11,7 @@ categories:
   - title: '🧰 Maintenance'
     label: 'chore'
 template: |
-  ![downloads](https://img.shields.io/github/downloads/Thomas55555/husqvarna_automower/$RESOLVED_VERSION/total.svg)
+  ![downloads](https://img.shields.io/github/downloads/Thomas55555/husqvarna_automower_map/$RESOLVED_VERSION/total.svg)
   ## What’s Changed
 
   $CHANGES

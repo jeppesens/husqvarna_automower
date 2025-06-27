@@ -1,5 +1,5 @@
 {
-  "domain": "husqvarna_automower",
+  "domain": "husqvarna_automower_map",
   "name": "Husqvarna Automower",
   "codeowners": [
     "@Thomas55555"
@@ -10,10 +10,10 @@
     "my",
     "schedule"
   ],
-  "documentation": "https://github.com/Thomas55555/husqvarna_automower",
+  "documentation": "https://github.com/Thomas55555/husqvarna_automower_map",
   "integration_type": "hub",
   "iot_class": "cloud_push",
-  "issue_tracker": "https://github.com/Thomas55555/husqvarna_automower/issues",
+  "issue_tracker": "https://github.com/Thomas55555/husqvarna_automower_map/issues",
   "loggers": [
     "aioautomower",
     "geopy",

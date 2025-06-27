@@ -5,7 +5,7 @@ calendar:
   description: This service deletes all of your calendar tasks and replaces it with a new one.
   target:
     entity:
-      integration: "husqvarna_automower"
+      integration: "husqvarna_automower_map"
       domain: "vacuum"
   fields:
     start:
@@ -86,7 +86,7 @@ schedule_selector:
   description: This service deletes all of your calendar tasks and replaces it with a new one.
   target:
     entity:
-      integration: "husqvarna_automower"
+      integration: "husqvarna_automower_map"
       domain: "vacuum"
   fields:
     schedule_selector:
@@ -105,7 +105,7 @@ custom_command:
     from https://developer.husqvarnagroup.cloud/apis/Automower+Connect+API#openapi"
   target:
     entity:
-      integration: "husqvarna_automower"
+      integration: "husqvarna_automower_map"
       domain: "vacuum"
   fields:
     command_type:

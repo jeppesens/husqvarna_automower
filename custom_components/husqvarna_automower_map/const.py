@@ -2,11 +2,11 @@
 from homeassistant.const import Platform
 
 # Base component constants
-NAME = "husqvarna_automower"
-DOMAIN = "husqvarna_automower"
+NAME = "husqvarna_automower_map"
+DOMAIN = "husqvarna_automower_map"
 DOMAIN_DATA = f"{DOMAIN}_data"
 INTEGRATION_VERSION = "master"
-ISSUE_URL = "https://github.com/Thomas55555/husqvarna_automower"
+ISSUE_URL = "https://github.com/Thomas55555/husqvarna_automower_map"
 HUSQVARNA_URL = "https://developer.husqvarnagroup.cloud/login"
 OAUTH2_AUTHORIZE = "https://api.authentication.husqvarnagroup.dev/v1/oauth2/authorize"
 OAUTH2_TOKEN = "https://api.authentication.husqvarnagroup.dev/v1/oauth2/token"

@@ -4,27 +4,18 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 from aioautomower import AutomowerSession
-
 from homeassistant.components.application_credentials import (
-    ClientCredential,
-    async_import_client_credential,
-)
+    ClientCredential, async_import_client_credential)
 from homeassistant.config_entries import ConfigEntryState
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.issue_registry import async_get
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from .. import async_reload_entry, update_listener
-from ..const import DOMAIN, MAP_IMG_ROTATION, MAP_PATH_COLOR, HOME_LOCATION
-from .const import (
-    AUTOMER_SM_CONFIG,
-    AUTOMOWER_CONFIG_DATA,
-    AUTOMOWER_CONFIG_DATA_BAD_SCOPE,
-    AUTOMOWER_SM_SESSION_DATA,
-    AUTOMOWER_DM_SESSION_DATA,
-    MWR_ONE_ID,
-    MWR_TWO_ID,
-)
+from ..const import DOMAIN, HOME_LOCATION, MAP_IMG_ROTATION, MAP_PATH_COLOR
+from .const import (AUTOMER_SM_CONFIG, AUTOMOWER_CONFIG_DATA,
+                    AUTOMOWER_CONFIG_DATA_BAD_SCOPE, AUTOMOWER_DM_SESSION_DATA,
+                    AUTOMOWER_SM_SESSION_DATA, MWR_ONE_ID, MWR_TWO_ID)
 
 
 async def configure_application_credentials(hass: HomeAssistant):
@@ -177,8 +168,8 @@ async def test_async_migrate_entry_2_to_4(hass: HomeAssistant):
         "enable_camera": True,
         "gps_top_left": [35.5411008, -82.5527418],
         "gps_bottom_right": [35.539442, -82.5504646],
-        "mower_img_path": "custom_components/husqvarna_automower/resources/mower.png",
-        "map_img_path": "custom_components/husqvarna_automower/tests/resources/biltmore-min.png",
+        "mower_img_path": "custom_components/husqvarna_automower_map/resources/mower.png",
+        "map_img_path": "custom_components/husqvarna_automower_map/tests/resources/biltmore-min.png",
     }
 
     config_entry = MockConfigEntry(
@@ -249,8 +240,8 @@ async def test_async_migrate_entry_3_to_4(hass: HomeAssistant):
             "enable_camera": True,
             "gps_top_left": [35.5411008, -82.5527418],
             "gps_bottom_right": [35.539442, -82.5504646],
-            "mower_img_path": "custom_components/husqvarna_automower/resources/mower.png",
-            "map_img_path": "custom_components/husqvarna_automower/tests/resources/biltmore-min.png",
+            "mower_img_path": "custom_components/husqvarna_automower_map/resources/mower.png",
+            "map_img_path": "custom_components/husqvarna_automower_map/tests/resources/biltmore-min.png",
             "map_path_color": [255, 0, 0],
             "map_img_rotation": -16.10,
             "home_location": [35.54028774, -82.5526962],
@@ -260,8 +251,8 @@ async def test_async_migrate_entry_3_to_4(hass: HomeAssistant):
             "enable_camera": True,
             "gps_top_left": [35.5411008, -82.5527418],
             "gps_bottom_right": [35.539442, -82.5504646],
-            "mower_img_path": "custom_components/husqvarna_automower/resources/mower.png",
-            "map_img_path": "custom_components/husqvarna_automower/tests/resources/biltmore-min.png",
+            "mower_img_path": "custom_components/husqvarna_automower_map/resources/mower.png",
+            "map_img_path": "custom_components/husqvarna_automower_map/tests/resources/biltmore-min.png",
             "map_path_color": [0, 0, 255],
             "map_img_rotation": -16.10,
             "home_location": [35.5409924, -82.5525482],
